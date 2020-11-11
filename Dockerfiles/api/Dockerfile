@@ -42,8 +42,11 @@ RUN apt-get update \
     github.com/go-sql-driver/mysql \
     github.com/google/uuid \
     github.com/gorilla/mux \
-    # get gomod
-    && GOPATH=/tmp/gotools go get -x -d github.com/stamblerre/gocode 2>&1 \
-    && GOPATH=/tmp/gotools go build -o gocode-gomod github.com/stamblerre/gocode
+    # # get gomod
+    # && GOPATH=/tmp/gotools go get -x -d github.com/stamblerre/gocode 2>&1 \
+    # && GOPATH=/tmp/gotools go build -o gocode-gomod github.com/stamblerre/gocode \
+    # Install Go tools
+    && mv /tmp/gotools/bin/* /usr/local/bin/
+# && mv gocode-gomod /usr/local/bin/
 
 ENV PORT=1324

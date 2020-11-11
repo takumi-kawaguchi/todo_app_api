@@ -3,10 +3,10 @@
     "dockerComposeFile": [
         "../docker-compose.yml"
     ],
-    "service": "todo_app_api",
+    "service": "api",
     "workspaceFolder": "/go/src",
     "settings": {
-        "terminal.integrated.shell.linux": "bin/bash",
+        "terminal.integrated.shell.linux": "/bin/bash",
         // no need?
         "go.gopath": "/go",
         "editor.tabSize": 4,
